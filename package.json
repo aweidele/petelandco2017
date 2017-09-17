@@ -1,0 +1,22 @@
+{
+  "name": "petelandco2017",
+  "version": "1.0.0",
+  "description": "2017 Website for Petel and Co",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aweidele/petelandco2017.git"
+  },
+  "author": "Aaron Weidele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aweidele/petelandco2017/issues"
+  },
+  "homepage": "https://github.com/aweidele/petelandco2017#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
