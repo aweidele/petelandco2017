@@ -1,5 +1,17 @@
 <?php
 
+// Enqueue Scripts and Styles
+function enqueue_styles() {
+	wp_enqueue_style( 'google_fonts',
+      '//fonts.googleapis.com/css?family=Libre+Franklin:300,300i,600,600i|PT+Sans+Narrow:700'
+  );
+
+  wp_enqueue_style( 'main_style',
+      get_stylesheet_directory_uri() . '/css/main.css'
+  );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
+
 // Register Custom Post Type
 function custom_post_type() {
 
