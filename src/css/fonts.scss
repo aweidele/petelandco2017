@@ -1,0 +1,17 @@
+@mixin garamond($weight:'normal',$style: 'none') {
+  font-family: 'Cormorant Garamond', serif;
+  @if $weight == 'bold' {
+    font-weight: 700;
+  } @else {
+    font-weight: 400;
+  }
+
+  @if $style == 'italic' {
+    font-style: italic;
+  }
+}
+
+@mixin sans {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}

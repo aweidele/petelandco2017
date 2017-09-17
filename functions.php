@@ -3,7 +3,7 @@
 // Enqueue Scripts and Styles
 function enqueue_styles() {
 	wp_enqueue_style( 'google_fonts',
-      '//fonts.googleapis.com/css?family=Libre+Franklin:300,300i,600,600i|PT+Sans+Narrow:700'
+      '//fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700|Open+Sans:300'
   );
 
   wp_enqueue_style( 'main_style',
