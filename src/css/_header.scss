@@ -1,0 +1,20 @@
+.header {
+  @include clearfix;
+  //padding: $gutter;
+}
+
+.header_pagetitle {
+  width: 226px;
+  height: 87px;
+  float: left;
+}
+
+.header_pagetitle_text {
+  @include visually_hide;
+}
+
+.header_pagetitle_logo {
+  width: 226px;
+  height: 87px;
+  display: block;
+}

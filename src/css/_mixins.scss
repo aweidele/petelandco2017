@@ -6,3 +6,8 @@
     display: table;
   }
 }
+
+@mixin visually_hide {
+  position: absolute;
+  left: -999999px;
+}
