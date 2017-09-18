@@ -1,6 +1,4 @@
 @import 'fonts';
 @import 'colors';
-
-.test {
-  @include garamond($style:'italic');
-}
+@import 'mixins';
+@import 'setup';
