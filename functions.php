@@ -12,6 +12,13 @@ function enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
+// Add Menus
+add_action( 'init', 'register_menus' );
+function register_menus() {
+  register_nav_menu( 'primary-menu', __( 'Primary Menu' ) );
+  //register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
+}
+
 // Register Custom Post Type
 function custom_post_type() {
 

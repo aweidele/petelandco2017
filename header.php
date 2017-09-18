@@ -60,6 +60,10 @@
     <h1 class="header_pagetitle"><a href="<?php echo get_home_url(); ?>">
       <span class="header_pagetitle_text"><?php echo get_bloginfo('name'); ?></span>
       <svg viewBox="0 0 578.6 182.8" class="header_pagetitle_logo"><use href="#logo"></use></svg></a>
+    </h1>
+    <nav class="main_nav">
+      <?php wp_nav_menu( array('theme_location' => 'primary-menu') ); ?>
+    </nav>
   </header>
 
   <main>
