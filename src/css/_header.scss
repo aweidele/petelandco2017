@@ -1,6 +1,7 @@
 .header {
   @include clearfix;
-  //padding: $gutter;
+  background: $gray_10;
+  padding: $gutter;
 }
 
 .header_pagetitle {

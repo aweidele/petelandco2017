@@ -5,7 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var sassOptions = {
   errLogToConsole: true,
-  outputStyle: 'expanded'
+  outputStyle: 'compressed'
 };
 
 var autoprefixerOptions = {
