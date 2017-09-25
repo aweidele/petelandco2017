@@ -1,0 +1,35 @@
+.main_nav {
+  position: relative;
+  left: 36px;
+  
+  float: right;
+
+  .menu-item {
+    display: inline-block;
+
+    a {
+      position: relative;
+
+      color: $black;
+      display: inline-block;
+      font-size: 2.4rem;
+      padding: 19px + $gutter 36px;
+      text-decoration: none;
+    }
+
+    &.current-menu-item {
+      a:after {
+        content: " ";
+        height: 12px;
+        width: 100%;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        background: $dk_teal;
+        display: block;
+      }
+    }
+  }
+}
