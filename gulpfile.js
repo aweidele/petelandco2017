@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
 
 var sassOptions = {
   errLogToConsole: true,
@@ -22,10 +24,21 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('css/'))
 });
 
-gulp.task('hello', function() {
-  console.log('Hello Aaron');
+gulp.task('iconfont', function(){
+  gulp.src(['icons/*.svg'])
+    .pipe(iconfontCss({
+      fontName: 'petel_glyphs',
+      targetPath: '../src/sass/_icons.scss',
+      fontPath: '../fonts/'
+    }))
+    .pipe(iconfont({
+      fontName: 'petel_glyphs'
+     }))
+    .pipe(gulp.dest('fonts/'));
 });
+
 
 gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
+  gulp.watch('icons/**/*.svg', ['iconfont','sass']);
 });
