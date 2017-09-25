@@ -32,7 +32,9 @@ gulp.task('iconfont', function(){
       fontPath: '../fonts/'
     }))
     .pipe(iconfont({
-      fontName: 'petel_glyphs'
+      fontName: 'petel_glyphs',
+      normalize:true,
+      fontHeight: 1001
      }))
     .pipe(gulp.dest('fonts/'));
 });

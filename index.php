@@ -1,8 +1,12 @@
 <?php
   get_header();
 ?>
+<div style="font-size: 50px">
 <span class="icon icon-map"></span>
 <span class="icon icon-phone"></span>
+<span class="icon icon-facebook"></span>
+<span class="icon icon-twitter"></span>
+</div>
 <div class="test">
   <div class="row">
     <div class="col_1">1</div>
