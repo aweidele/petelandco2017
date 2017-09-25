@@ -2,10 +2,10 @@
   get_header();
 ?>
 <div style="font-size: 50px">
-<span class="icon icon-map"></span>
-<span class="icon icon-phone"></span>
-<span class="icon icon-facebook"></span>
-<span class="icon icon-twitter"></span>
+  <?php echo icon('facebook'); ?><br>
+  <?php echo icon('twitter'); ?><br>
+  <?php echo icon('map'); ?><br>
+  <?php echo icon('phone'); ?><br>
 </div>
 <div class="test">
   <div class="row">
