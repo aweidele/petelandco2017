@@ -2,6 +2,15 @@
   color: $white;
   position: relative;
   z-index: 0;
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $magenta;
+    }
+  }
 }
 
 .footer_amp {
@@ -16,8 +25,27 @@
   opacity: 0.25;
 }
 
+.footer_contact {
+  @include sans;
+  font-size: 16px;
+  padding: 78px 0 50px;
+}
+
 .footer_logo {
   width: 154px;
   display: block;
   fill: $white;
+  margin-bottom: 30px;
+}
+
+.footer_contact_block {
+  position: relative;
+  margin-bottom: 1em;
+  padding-left: 36px;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
