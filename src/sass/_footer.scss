@@ -11,15 +11,13 @@
   top: -47px;
   left: -12px;
 
+  display: block;
   fill: $magenta;
   opacity: 0.25;
 }
 
 .footer_logo {
-  &,
-  #target,
-  #amp,
-  #type {
-    fill: $white;
-  }
+  width: 154px;
+  display: block;
+  fill: $white;
 }
