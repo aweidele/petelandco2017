@@ -4,5 +4,12 @@ html {
 
 body {
   @include garamond;
+  background: $gray_90;
   font-size: 1em;
+}
+
+.main {
+  position: relative;
+  background: $white;
+  z-index: 1;
 }

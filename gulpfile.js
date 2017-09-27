@@ -7,7 +7,7 @@ var iconfontCss = require('gulp-iconfont-css');
 
 var sassOptions = {
   errLogToConsole: true,
-  outputStyle: 'compressed'
+  outputStyle: 'expanded'
 };
 
 var autoprefixerOptions = {

@@ -18,9 +18,7 @@
 <body>
   <figure class="petel_images">
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.6 182.8" style="enable-background:new 0 0 612 234;version:1"><style type="text/css">
-    	.st0{fill:#E31837;}
-    </style>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.6 182.8" style="enable-background:new 0 0 612 234;version:1">
       <g id="logo">
         <path id="target" class="st0" d="M578.6,157.2c0,14.2-69.3,25.6-154.7,25.6c-85.4,0-154.7-11.5-154.7-25.6c0-2.6,2.3-5,6.5-7.3
         	c-0.8,0.9-1.3,1.9-1.3,2.9c0,11.8,59.6,21.4,133.1,21.4c73.5,0,133.1-9.6,133.1-21.4c0-10.7-48.7-19.5-112.4-21.2
@@ -66,4 +64,4 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main">

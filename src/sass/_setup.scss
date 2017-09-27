@@ -35,9 +35,19 @@ $max-width: 1180px;
   }
 
   @for $i from 1 through $cols {
-    .col_#{$i} {
+    .col-#{$i} {
       @extend %col;
       width: percentage($i / $cols);
     }
   }
+
+  @for $i from 1 through $cols {
+    .push-#{$i} {
+      margin-left: percentage($i / $cols);
+    }
+  }
+}
+
+#target,#amp,#type  {
+  fill: inherit;
 }
