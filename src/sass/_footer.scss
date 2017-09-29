@@ -49,3 +49,18 @@
     left: 0;
   }
 }
+
+.social_header {
+  @include paragraph;
+  margin-top: 155px;
+  margin-bottom: 21px;
+}
+
+.social_link {
+  display: inline-block;
+  font-size: 35px;
+  margin-right: 7px;
+}
+.social_link_label {
+  @include visually_hide;
+}

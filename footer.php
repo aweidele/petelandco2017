@@ -25,6 +25,13 @@
           </div>
         </div>
       </div>
+      <div class="col-3">
+        <h4 class="social_header">Get the Latest</h4>
+        <div class="social_links">
+          <a href="#" class="social_link"><?php echo icon('facebook'); ?><span class="social_link_label">Facebook</span></a>
+          <a href="#" class="social_link"><?php echo icon('twitter'); ?><span class="social_link_label">Twitter</span></a>
+        </div>
+      </div>
     </div>
     <svg viewBox="290.2 9.2 115 140" class="footer_amp">
       <use href="#amp" class="amp"></use>
