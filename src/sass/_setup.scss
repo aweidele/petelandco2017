@@ -26,6 +26,7 @@ a {
 $cols: 12;
 $gutter: 20px;
 $max-width: 1180px;
+$breakpoint: 900px;
 
 .row {
   @include clearfix;
@@ -35,7 +36,7 @@ $max-width: 1180px;
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: $breakpoint) {
   %col {
     padding-right: $gutter / 2;
     padding-left: $gutter / 2;

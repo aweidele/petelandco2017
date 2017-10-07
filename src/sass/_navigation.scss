@@ -1,7 +1,7 @@
 .main_nav {
   position: relative;
   left: 36px;
-  
+
   float: right;
 
   .menu-item {
@@ -24,7 +24,7 @@
         width: 100%;
 
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
 
         background: $dk_teal;
