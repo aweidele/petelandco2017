@@ -1,0 +1,31 @@
+.services {
+  padding: 100px 0 114px;
+}
+
+.services_title {
+  margin-bottom: 0.6em;
+}
+
+.services_intro {
+  @include paragraph;
+}
+
+.services_heading {
+  @include heading_line;
+
+  font-size: 30px;
+  margin-bottom: 0.6em;
+}
+
+.services_list {
+  padding: 0 $gutter / 2;
+  @media screen and (min-width: 650px) {
+    columns: 2;
+    column-gap: $gutter;
+  }
+}
+
+.services_item {
+  font-size: 18px;
+  margin-bottom: 1em;
+}

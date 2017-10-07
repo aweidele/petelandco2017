@@ -12,6 +12,35 @@
   left: -999999px;
 }
 
-@mixin heading_line {
-  position: relative;
+@mixin heading_line($color: $white) {
+  overflow: hidden;
+  text-align: center;
+
+  span {
+    position: relative;
+
+    display: inline-block;
+    padding: 0 10px;
+
+    &:before,
+    &:after {
+      height: 1px;
+      width: 100%;
+
+      position: absolute;
+      top: 50%;
+
+      content: '';
+      background: $color;
+      display: block;
+    }
+
+    &:before {
+      left: -100%;
+    }
+
+    &:after {
+      right: -100%;
+    }
+  }
 }

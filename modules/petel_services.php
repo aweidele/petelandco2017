@@ -15,15 +15,12 @@
       </div>
     </div>
     <div class="col-6 push-1">
-      <h4 class="services_heading"><?php echo $content['section_heading']; ?></h4>
+      <h4 class="services_heading"><span class="services_heading_inner"><?php echo $content['section_heading']; ?></span></h4>
       <ul class="services_list">
 <?php foreach($services as $service) { ?>
         <li class="services_item"><?=$service?></li>
 <?php } ?>
       </ul>
-      <pre><?php print_r($services); ?></pre>
     </div>
   </div>
 <section>
-
-<pre><?php print_r($content); ?></pre>
