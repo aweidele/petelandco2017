@@ -1,15 +1,33 @@
 .mc_text_content {
+  @include paragraph;
+  padding: 90px 0;
+}
 
+
+%mc_text_col {
+  column-gap: $gutter;
+}
+
+@for $i from 2 to 12 {
+  .mc_text_col-#{$i} {
+    @extend %mc_text_col;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  %responsive_col {
+    columns: 2;
+  }
+  @for $i from 2 to 12 {
+    .mc_text_col-#{$i} {
+      @extend %responsive_col;
+    }
+  }
 }
 
 @media screen and (min-width: $breakpoint) {
-  %mc_text_col {
-    column-gap: $gutter;
-  }
-
   @for $i from 2 to 12 {
     .mc_text_col-#{$i} {
-      @extend %mc_text_col;
       columns: $i;
     }
   }

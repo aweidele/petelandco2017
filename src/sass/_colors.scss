@@ -3,6 +3,25 @@ $white: #FFFFFF;
 
 $magenta: #D0112B;
 $dk_teal: #004551;
+$purple: #5F5270;
 
 $gray_10: #e9f4f5;
 $gray_90: #27292b;
+
+$themes: (
+  (magenta, $magenta),
+  (purple, $purple),
+  (dk_teal,$dk_teal)
+);
+
+@each $name, $color in $themes {
+  .bg-#{$name} {
+    background: $color;
+  }
+}
+
+@each $name, $color in $themes {
+  .txt-#{$name} {
+    background: $color;
+  }
+}

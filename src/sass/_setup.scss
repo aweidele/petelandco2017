@@ -33,6 +33,11 @@ $breakpoint: 900px;
   width: 100%;
   margin: auto;
   max-width: $max-width + $gutter;
+  padding: 0 $gutter;
+
+  @media screen and (min-width: $breakpoint) {
+    padding: 0;
+  }
 }
 
 

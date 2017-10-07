@@ -12,6 +12,8 @@
 <?php
   foreach($child_pages as $section) {
     $layout = get_field('layout',$section->ID);
+    $theme = get_field('theme',$section->ID);
+    $background_class = get_field('background_class',$theme->ID);
     include('modules/petel_'.$layout.'.php');
   }
   get_footer();
