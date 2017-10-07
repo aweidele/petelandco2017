@@ -9,18 +9,19 @@ $gray_10: #e9f4f5;
 $gray_90: #27292b;
 
 $themes: (
-  (magenta, $magenta),
-  (purple, $purple),
-  (dk_teal,$dk_teal)
+  (magenta, $magenta, $white),
+  (purple, $purple, $white),
+  (dk_teal,$dk_teal, $white)
 );
 
-@each $name, $color in $themes {
+@each $name, $color, $txt in $themes {
   .bg-#{$name} {
     background: $color;
+    color: $txt;
   }
 }
 
-@each $name, $color in $themes {
+@each $name, $color, $txt in $themes {
   .txt-#{$name} {
     background: $color;
   }
