@@ -1,10 +1,17 @@
-.our_record {}
+.our_record {
+  padding: 90px 0;
+}
 
 .our_record_header {}
 
-.our_record_title {}
+.our_record_title {
+  margin-bottom: 0.4em;
+}
 
-.our_record_intro {}
+.our_record_intro,
+.our_record_stats {
+  margin-bottom: 45px;
+}
 
 .our_record_stats {}
 
@@ -44,4 +51,44 @@
 
 .our_record_stat_text {
   font-size: 16px;
+}
+
+
+.our_record_results {}
+
+.our_record_results_inner {}
+
+.our_record_results_heading {
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+
+.our_record_results_list {
+  @media screen and (min-width: 730px) {
+    columns: 2;
+    column-gap: $gutter;
+  }
+}
+
+.our_record_result {
+  @include paragraph;
+  position: relative;
+
+  break-inside: avoid-column; 
+  margin-bottom: 1em;
+  padding-left: 28px;
+
+  &:before {
+    height: 12px;
+    width: 12px;
+
+    position: absolute;
+    top: 6px;
+    left: 2px;
+
+    content: '';
+    background: $white;
+    display: block;
+    border-radius: 6px;
+  }
 }

@@ -1,5 +1,6 @@
 <?php
   $content = get_field('our_record',$section->ID);
+  $results_list = preg_split ('/$\R?^/m', $content['results_list']);
 ?>
 <section class="our_record<?php echo $background_class ? ' '.$background_class : ''?>" id="<?php echo $section->post_name; ?>">
   <header class="our_record_header row">
@@ -24,5 +25,16 @@
 
     </div>
   </div>
-  <pre><?php print_r($content); ?></pre>
+  <div class="our_record_results row">
+    <div class="col-10 push-1">
+      <div class="our_record_results_inner">
+        <h3 class="our_record_results_heading"><?php echo $content['results_heading']; ?></h3>
+        <ul class="our_record_results_list">
+<?php foreach($results_list as $result) { ?>
+          <li class="our_record_result"><?php echo $result; ?></li>
+<?php } ?>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
