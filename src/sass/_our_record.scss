@@ -1,0 +1,47 @@
+.our_record {}
+
+.our_record_header {}
+
+.our_record_title {}
+
+.our_record_intro {}
+
+.our_record_stats {}
+
+.our_record_stats_inner {
+  @media screen and (min-width: 730px) {
+    width: calc(100% + #{$gutter});
+
+    position: relative;
+    left: $gutter / -2;
+
+    display: flex;
+  }
+}
+
+.our_record_stat {
+  align-items: center;
+  background: rgba($black,0.33);
+  flex: 1;
+  padding: $gutter / 2;
+  text-align: center;
+
+  &:nth-child(2n) {
+    background: rgba($black,0.5);
+  }
+}
+
+.our_record_stat_number {
+  @include h1;
+  font-feature-settings: "lnum";
+  line-height: 115px;
+  display: block;
+
+  &.our_record_stat_number_long {
+    @include h3;
+  }
+}
+
+.our_record_stat_text {
+  font-size: 16px;
+}

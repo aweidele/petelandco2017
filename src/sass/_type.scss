@@ -48,3 +48,11 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+p {
+  @include paragraph;
+}
+
+pre {
+  font-size: 14px;
+}

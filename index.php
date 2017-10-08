@@ -1,7 +1,8 @@
 <?php
   get_header();
   $child_pages = get_pages(array(
-    'parent' => $post->ID
+    'parent' => $post->ID,
+    'sort_column' => 'menu_order',
   ));
 ?>
   <header class="page_header">
