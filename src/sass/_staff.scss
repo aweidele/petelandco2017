@@ -38,6 +38,13 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  opacity: 0;
+  transition: opacity $speed;
+
+  .staff_card:hover & {
+    opacity: 1;
+  }
 }
 
 .staff_card_info_inner {
