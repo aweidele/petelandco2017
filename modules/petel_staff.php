@@ -5,17 +5,22 @@
     'order' => 'ASC'
   ) );
 
-  if(sizeof($staff_list) == 2 || sizeof($staff) == 4) {
-
-  }
+  $l = sizeof($staff_list);
 ?>
 <section class="staff_list<?php echo $background_class ? ' '.$background_class : ''?>" id="<?php echo $section->post_name; ?>">
   <div class="row">
-    <?php foreach($staff_list as $staff) {
+    <h2 class="staff_list_section_title"><?php echo $section->post_title; ?></h2>
+  </div>
+  <div class="row">
+    <?php foreach($staff_list as $i => $staff) {
       $portrait = get_field('portrait',$staff->ID);
       $title = get_field('title',$staff->ID);
     ?>
-      <div class="col-4 no-padding">
+      <div class="col-4 no-padding<?php
+        if( !($i % 2) && ($l == 2 || $l == 4) ) {
+          echo ' push-2';
+        }
+      ?>">
         <a href="<?php echo get_permalink($staff->ID); ?>">
           <article class="staff_card theme_purple" id="staff_<?php echo $staff->post_name; ?>">
             <div class="staff_card_portrait">

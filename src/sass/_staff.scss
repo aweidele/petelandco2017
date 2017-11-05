@@ -1,7 +1,16 @@
 .staff_list {
   padding: 100px 0;
+
+  [class*="push-"] {
+    clear: both;
+  }
 }
 
+.staff_list_section_title {
+  @include h3;
+  margin-bottom: (110 / 47) * 1em;
+  text-align: center;
+}
 
 .staff_card {
   position: relative;
