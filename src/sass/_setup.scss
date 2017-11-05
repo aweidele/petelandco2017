@@ -46,6 +46,11 @@ $breakpoint: 900px;
     padding-right: $gutter / 2;
     padding-left: $gutter / 2;
     float: left;
+
+    &.no-padding {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   @for $i from 1 through $cols {

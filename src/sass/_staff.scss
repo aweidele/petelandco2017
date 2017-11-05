@@ -1,3 +1,57 @@
 .staff_list {
   padding: 100px 0;
 }
+
+
+.staff_card {
+  position: relative;
+
+  @each $name, $color, $txt in $themes {
+    &.theme_#{$name} {
+      .staff_card_info {
+        background: rgba($color,0.65);
+        color: $txt;
+      }
+    }
+  }
+
+}
+
+.staff_card_portrait {
+  width: 100%;
+  position: relative;
+
+  z-index: 0;
+}
+
+.staff_card_portrait_image {
+  height: auto;
+  width: 100%;
+
+  display: block;
+}
+
+.staff_card_info {
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.staff_card_info_inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: $gutter;
+}
+
+.staff_card_name {
+  font-style: italic;
+}
+
+.staff_card_title {
+  @include paragraph;
+}
