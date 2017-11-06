@@ -25,7 +25,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('iconfont', function(){
-  gulp.src(['icons/*.svg'])
+  gulp.src(['src/icons/*.svg'])
     .pipe(iconfontCss({
       fontName: 'petel_glyphs',
       targetPath: '../src/sass/_icons.scss',
@@ -42,5 +42,5 @@ gulp.task('iconfont', function(){
 
 gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('icons/**/*.svg', ['iconfont','sass']);
+  gulp.watch('src/icons/**/*.svg', ['iconfont','sass']);
 });
