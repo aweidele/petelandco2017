@@ -4,11 +4,20 @@
   $title = get_field('title',$staff->ID);
 
   // Determine Next and Previous
-  $staff_list = get_posts(array(
+  $staff_posts = get_posts(array(
     'post_type' => 'petel-staff',
     'orderby' => 'menu_order',
     'order' => 'ASC'
   ) );
+
+  $staff_list = [];
+  foreach ($staff_posts as $staff) {
+    $staff_list[] = $staff->ID;
+  }
+
+  $current_index = array_search($post->ID,$staff_list);
+  $next_staff = $current_index < sizeof($staff_posts) - 1 ? $staff_posts[$current_index + 1] : $staff_posts[0];
+  $prev_staff = $current_index > 0 ? $staff_posts[$current_index - 1] : $staff_posts[sizeof($staff_posts) - 1];
 ?>
 <header class="page_header">
   <div class="row">
@@ -29,6 +38,10 @@
       <div class="staff_card_title"><?php echo $title; ?></div>
       <div class="staff_detail_content">
         <?php echo wpautop($post->post_content); ?>
+      </div>
+      <div class="staff_detail_next_prev">
+        <a href="<?php echo get_permalink($prev_staff->ID); ?>" class="staff_detail_prev">Previous: <?php echo $prev_staff->post_title; ?></a>
+        <a href="<?php echo get_permalink($next_staff->ID); ?>" class="staff_detail_next">Next: <?php echo $next_staff->post_title; ?></a>
       </div>
     </div>
   </div>

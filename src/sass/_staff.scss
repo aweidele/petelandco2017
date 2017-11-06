@@ -98,3 +98,30 @@
     margin-bottom: 1em;
   }
 }
+
+.staff_detail_next_prev {
+  @include clearfix;
+  padding-top: 37px;
+}
+
+.staff_detail_prev,
+.staff_detail_next {
+  @include paragraph;
+
+  color: $gray_20;
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $magenta;
+  }
+}
+
+.staff_detail_prev {
+  float: left;
+}
+
+.staff_detail_next {
+  float: right;
+}

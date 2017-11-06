@@ -1,3 +1,5 @@
+$speed: 0.25s;
+
 * {
   box-sizing: border-box;
   border: 0;
@@ -15,7 +17,7 @@ address {
 }
 
 a {
-  transition: color 0.25s;
+  transition: color $speed;
 }
 
 .petel_images {
@@ -70,5 +72,3 @@ $breakpoint: 900px;
 #target,#amp,#type  {
   fill: inherit;
 }
-
-$speed: 0.25s;
