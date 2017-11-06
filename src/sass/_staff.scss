@@ -71,3 +71,30 @@
 .staff_card_title {
   @include paragraph;
 }
+
+
+// Staff Detail Page
+////////////////////////////////////////////////////////////////////////////////
+.staff_detail {
+  padding: 130px 0;
+}
+
+.staff_detail_main_name {
+  @include h3;
+}
+
+.staff_detail_main {
+  .staff_card_title {
+    font-weight: 700;
+    margin: 1em 0;
+  }
+}
+
+.staff_detail_content {
+  border-bottom: 1px solid $gray_20;
+  padding-bottom: 24px;
+  p {
+    line-height: (33.6 / 24) * 1em;
+    margin-bottom: 1em;
+  }
+}

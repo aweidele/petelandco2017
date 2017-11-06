@@ -73,8 +73,16 @@ function custom_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'rewrite'								=> array(
+			'slug'                  => 'staff',
+			'with_front'            => true,
+			'pages'                 => true,
+			'feeds'                 => true,
+		),
 	);
 	register_post_type( 'petel-staff', $args );
+
+	flush_rewrite_rules();
 
 }
 add_action( 'init', 'custom_post_type', 0 );
