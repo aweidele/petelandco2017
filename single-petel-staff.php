@@ -1,7 +1,8 @@
 <?php
   get_header();
   $portrait = get_field('portrait');
-  $title = get_field('title',$staff->ID);
+  $title = get_field('title');
+  $social = get_field('social_media');
 
   // Determine Next and Previous
   $staff_posts = get_posts(array(
@@ -31,6 +32,31 @@
         <div class="staff_card_portrait">
           <img src="<?php echo $portrait['sizes']['staff-portait']; ?>" class="staff_card_portrait_image">
         </div>
+        <div class="staff_card_connect">
+        <?php
+          ob_start();
+          $scount = 0;
+          foreach($social as $key => $link) {
+            if($key == "first_name") {
+        ?>
+          <span class="staff_card_connect_label">Follow <?php echo $link != "" ? $link : firstname($post->post_title); ?>:</span>
+        <?php
+            } else {
+              if($link) {
+                $scount++;
+        ?>
+          <a href="<?php echo $link; ?>" class="staff_card_connect_link"><?php echo icon('social_'.$key); ?></a>
+        <?php
+              }
+            }
+          }
+          if($scount > 0) {
+            echo ob_get_clean();
+          }
+          ob_end_clean();
+          ob_end_flush();
+        ?>
+        </div>
       </div>
     </div>
     <div class="col-6 push-1 staff_detail_main">
@@ -48,3 +74,8 @@
 </article>
 <?php
   get_footer();
+
+  function firstname($name) {
+    $n = explode(" ",$name);
+    return $n[0];
+  }

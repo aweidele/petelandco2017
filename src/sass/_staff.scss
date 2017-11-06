@@ -125,3 +125,20 @@
 .staff_detail_next {
   float: right;
 }
+
+.staff_card_connect {
+  @include paragraph;
+  padding-top: 40px;
+}
+
+.staff_card_connect_link {
+  position: relative;
+  top: 5px;
+  
+  color: $gray_20;
+  text-decoration: none;
+
+  &:hover {
+    color: $magenta;
+  }
+}
