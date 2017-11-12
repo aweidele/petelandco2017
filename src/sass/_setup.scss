@@ -29,6 +29,12 @@ $cols: 12;
 $gutter: 20px;
 $max-width: 1180px;
 $breakpoint: 900px;
+$breakpoint_sm: 700px;
+
+$min_lg: "screen and (min-width: " #{$breakpoint} ")";
+$min_sm: "screen and (min-width: " #{$breakpoint_sm} ")";
+
+$max_sm: "screen and (max-width: " #{$breakpoint_sm - 1} ")";
 
 .row {
   @include clearfix;

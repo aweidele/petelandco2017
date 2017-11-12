@@ -1,12 +1,18 @@
 .project {}
 
 .project_info {
-  padding: 110px 0;
+  padding: 22px 0;
 }
 
-.project_header {
-  padding-right: $gutter;
-  text-align: right;
+@media #{$min_lg} {
+  .project_info {
+    padding: 110px 0;
+  }
+
+  .project_header {
+    padding-right: $gutter;
+    text-align: right;
+  }
 }
 
 .project_title {
@@ -20,24 +26,33 @@
 }
 
 .project_info_content {
-  position: relative;
-  padding-left: $gutter;
+  padding-top: 35px;
 
   p {
-    @include h4;
+    font-size: 16px;
     line-height: (44.8 / 32) * 1em;
   }
 
-  &:before {
-    height: 100%;
-    width: 1px;
+  @media #{$min_lg} {
+    position: relative;
+    padding-top: 0;
+    padding-left: $gutter;
 
-    position: absolute;
-    top: 0;
-    left: 0;
+    p {
+      font-size: 47px;
+    }
 
-    content: "";
-    background: $white;
+    &:before {
+      height: 100%;
+      width: 1px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      content: "";
+      background: $white;
+    }
   }
 }
 
@@ -54,11 +69,32 @@
 }
 
 .project_images {
-  padding: 87px 110px;
+  padding: 16px 0 41px;
+
+  @media #{$max_sm} {
+    .row {
+      padding: 0;
+    }
+  }
 }
 
 .project_figure {
-  margin-bottom: 87px;
+  margin-bottom: 16px;
 }
 
-.project_image {}
+@media #{$min_sm} {
+  .project_images {
+    padding: 87px 0 110px;
+  }
+
+  .project_figure {
+    margin-bottom: 87px;
+  }
+}
+
+.project_image {
+  height: auto;
+  width: 100%;
+
+  display: block;
+}

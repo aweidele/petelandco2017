@@ -1,21 +1,49 @@
+// 95 (3.998em)		A Visual Type Scale
+// 67 (2.827em)		A Visual Type Scale
+// 47 (1.999em)		A Visual Type Scale
+// 33 (1.414em)		A Visual Type Scale
+// 24 (1em	)			A Visual Type Scale
+// 16 (0.707em)		A Visual Type Scale
+// 12 (0.5em)			A Visual Type Scale
+// 8 (0.354em)			A Visual Type Scale
 @mixin h1 {
-  font-size: 95px;
+  font-size: 67px;
+
+  @media #{$min_sm} {
+    font-size: 95px;
+  }
 }
 
 @mixin h2 {
-  font-size: 67px;
+  font-size: 33px;
+
+  @media #{$min_sm} {
+    font-size: 67px;
+  }
 }
 
 @mixin h3 {
   font-size: 47px;
+
+  @media #{$min_sm} {
+    font-size: 47px;
+  }
 }
 
 @mixin h4 {
   font-size: 33px;
+
+  @media #{$min_sm} {
+    font-size: 33px;
+  }
 }
 
 @mixin paragraph {
   font-size: 24px;
+
+  @media #{$min_sm} {
+    font-size: 24px;
+  }
 }
 
 h1 {
