@@ -25,6 +25,30 @@
   }
 }
 
+%bq_dk {
+  &:after {
+    background: $black;
+  }
+}
+
+%bq_lt {
+  &:after {
+    background: $white;
+  }
+}
+
+@each $name, $color, $txt in $themes {
+  .bg-#{$name} {
+    .testimonial_blockquote {
+      @if $txt == $white {
+        @extend %bq_lt;
+      } @else {
+        @extend %bq_dk;
+      }
+    }
+  }
+}
+
 .testimonial_quote {
   font-style: italic;
 }
