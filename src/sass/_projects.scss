@@ -1,0 +1,64 @@
+.project {}
+
+.project_info {
+  padding: 110px 0;
+}
+
+.project_header {
+  padding-right: $gutter;
+  text-align: right;
+}
+
+.project_title {
+  @include h3;
+  font-style: italic;
+  line-height: (57.6 / 47) * 1em;
+}
+
+.project_subtitle {
+  @include h4;
+}
+
+.project_info_content {
+  position: relative;
+  padding-left: $gutter;
+
+  p {
+    @include h4;
+    line-height: (44.8 / 32) * 1em;
+  }
+
+  &:before {
+    height: 100%;
+    width: 1px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: "";
+    background: $white;
+  }
+}
+
+@each $name, $color, $txt in $themes {
+  .bg-#{$name} {
+    .project_info_content:before {
+      @if $txt == $white {
+        @extend %bq_lt;
+      } @else {
+        @extend %bq_dk;
+      }
+    }
+  }
+}
+
+.project_images {
+  padding: 87px 110px;
+}
+
+.project_figure {
+  margin-bottom: 87px;
+}
+
+.project_image {}

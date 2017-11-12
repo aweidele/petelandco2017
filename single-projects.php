@@ -32,8 +32,8 @@
   <main class="project_images">
     <div class="row">
 <?php foreach($fields['gallery'] as $image) { ?>
-      <figure class="project_image">
-        <img src="<?php echo $image['sizes']['full']; ?>">
+      <figure class="project_figure">
+        <img class="project_image" src="<?php echo $image['sizes']['full']; ?>">
       </figure>
 <?php } ?>
     </div>

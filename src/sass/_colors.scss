@@ -3,10 +3,11 @@ $white: #FFFFFF;
 
 $magenta: #D0112B;
 $olive: #939B50;
-$orange: #EBA359;
+$orange: #F68E1E;
 $purple: #5F5270;
 
 $dk_teal: #004551;
+$lt_orange: #EBA359;
 
 $gray_10: #e9f4f5;
 $gray_20: #858b91;
@@ -18,6 +19,7 @@ $themes: (
   (orange, $orange, $white),
   (purple, $purple, $white),
   (dk_teal,$dk_teal, $white),
+  (lt_orange, $lt_orange, $black),
   (gray_10, $gray_10, $black)
 );
 

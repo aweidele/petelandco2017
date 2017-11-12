@@ -26,20 +26,16 @@
 }
 
 %bq_dk {
-  &:after {
-    background: $black;
-  }
+  background: $black;
 }
 
 %bq_lt {
-  &:after {
-    background: $white;
-  }
+  background: $white;
 }
 
 @each $name, $color, $txt in $themes {
   .bg-#{$name} {
-    .testimonial_blockquote {
+    .testimonial_blockquote:after {
       @if $txt == $white {
         @extend %bq_lt;
       } @else {
