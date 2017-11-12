@@ -1,0 +1,38 @@
+.testimonials {
+  padding: 82px 0 119px;
+}
+
+.testimonials_title {
+  margin-bottom: (78 / 67) * 1em;
+  text-align: center;
+}
+
+.testimonial_blockquote {
+  position: relative;
+  padding: (45 / 18) * 1em 0;
+
+  &:after {
+    height: 1px;
+    width: 43%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    display: block;
+    background: $black;
+  }
+}
+
+.testimonial_quote {
+  font-style: italic;
+}
+
+.testimonial_cite {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 0.4em 0;
+}

@@ -3,6 +3,7 @@ $white: #FFFFFF;
 
 $magenta: #D0112B;
 $olive: #939B50;
+$orange: #EBA359;
 $purple: #5F5270;
 
 $dk_teal: #004551;
@@ -14,8 +15,10 @@ $gray_90: #27292b;
 $themes: (
   (magenta, $magenta, $white),
   (olive, $olive, $white),
+  (orange, $orange, $black),
   (purple, $purple, $white),
-  (dk_teal,$dk_teal, $white)
+  (dk_teal,$dk_teal, $white),
+  (gray_10, $gray_10)
 );
 
 @each $name, $color, $txt in $themes {
