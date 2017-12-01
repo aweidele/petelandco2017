@@ -4,7 +4,7 @@
 ?>
 <?php if($post->post_content) {
   $fields = get_fields();
-  $background_class = 'bg-'.get_field('theme_theme');
+  $background_class = 'bg-'.$fields['theme'];
 ?>
   <article class="project">
   <div class="project_info<?php echo $background_class ? ' '.$background_class : ''?>">

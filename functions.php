@@ -149,3 +149,7 @@ add_action( 'init', 'custom_post_type', 0 );
 function icon($icon) {
 	return '<span class="icon icon-'.$icon.'"></span>';
 }
+
+function console($a) {
+	return '<script type="text/javascript">console.log('.json_encode($a).');</script>';
+}

@@ -1,6 +1,6 @@
 // Project Listing
 ////////////////////////////////////////////////////////////////////////////////
-$grad_dark: 20;
+$grad_dark: 25;
 
 .projects {}
 
@@ -35,7 +35,7 @@ $grad_dark: 20;
 
     content: "";
     display: block;
-    background: linear-gradient(0deg, $magenta, darken($magenta,$grad_dark));
+    background: linear-gradient(180deg, $magenta, darken($magenta,$grad_dark));
     opacity: 0;
     transition: opacity $speed * 2;
     z-index: 1;
@@ -64,7 +64,7 @@ $grad_dark: 20;
 @each $name, $color, $txt in $themes {
   .projects_project.projects_theme_#{$name} {
     .projects_link:after {
-      background: linear-gradient(0deg, $color, darken($color,$grad_dark));
+      background: linear-gradient(180deg, $color, darken($color,$grad_dark));
     }
   }
 }
