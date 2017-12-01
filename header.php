@@ -15,7 +15,20 @@
 
 <?php wp_head(); ?>
 </head>
-<body>
+<?php
+  if(is_front_page()) {
+    $layout = "home";
+  } else if (is_post_type_archive( "projects" ) || is_singular( "projects" )) {
+    $layout = "projects";
+  } else if (is_post_type_archive( "petel-staff" ) || is_singular( "petel-staff" ) ) {
+    $layout = "staff";
+  } else if(get_page_template_slug()) {
+    $layout = str_replace(".php","",get_page_template_slug());
+  } else {
+    $layout = "default";
+  }
+?>
+<body class="body_<?php echo $layout; ?>">
   <figure class="petel_images">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.6 182.8" style="enable-background:new 0 0 612 234;version:1">
       <g id="logo">
@@ -54,7 +67,7 @@
       </g>
     </svg>
   </figure>
-  <header class="header">
+  <header class="header header_<?php echo $layout; ?>">
     <h1 class="header_pagetitle"><a href="<?php echo get_home_url(); ?>">
       <span class="header_pagetitle_text"><?php echo get_bloginfo('name'); ?></span>
       <svg viewBox="0 0 578.6 182.8" class="header_pagetitle_logo">
@@ -68,4 +81,4 @@
     </nav>
   </header>
 
-  <main class="main">
+  <main class="main main_<?php echo $layout; ?>">
