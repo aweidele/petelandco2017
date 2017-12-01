@@ -1,3 +1,120 @@
+// Project Listing
+////////////////////////////////////////////////////////////////////////////////
+$grad_dark: 20;
+
+.projects {}
+
+.projects_header {}
+
+.projects_filters {}
+
+.projects_listing {
+  @include clearfix;
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects_project {
+  width: 50%;
+  position: relative;
+  float: left;
+}
+
+.projects_link {
+  position: relative;
+  color: $white;
+  display: block;
+
+  &:after {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: "";
+    display: block;
+    background: linear-gradient(0deg, $magenta, darken($magenta,$grad_dark));
+    opacity: 0;
+    transition: opacity $speed * 2;
+    z-index: 1;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0.53;
+    }
+
+    .projects_image {
+      filter: grayscale(100%);
+    }
+
+    .projects_project:nth-child(2n) &,
+    .projects_project:nth-child(2n+1) & {
+     .projects_info  {
+       opacity: 1;
+       transform: translate(0,-50%);
+      }
+    }
+
+  }
+}
+
+@each $name, $color, $txt in $themes {
+  .projects_project.projects_theme_#{$name} {
+    .projects_link:after {
+      background: linear-gradient(0deg, $color, darken($color,$grad_dark));
+    }
+  }
+}
+
+.projects_figure,
+.projects_image {
+  height: auto;
+  width: 100%;
+
+  position: relative;
+
+  display: block;
+  z-index: 0;
+  transition: filter $speed * 2;
+}
+
+.projects_info {
+  max-width: 100%;
+
+  position: absolute;
+  top: 50%;
+
+  padding: 0 20px;
+  transition: transform $speed * 2, opacity $speed * 2;
+  z-index: 2;
+
+  .projects_project:nth-child(2n+1) & {
+    left: 0;
+    text-align: left;
+    transform: translate(-100%,-50%);
+  }
+  .projects_project:nth-child(2n) & {
+    right: 0;
+    text-align: right;
+    transform: translate(100%,-50%);
+  }
+}
+
+.projects_title {
+  font-size: 48px;
+  font-style: italic;
+}
+
+.projects_subtitle {
+  font-size: 24px;
+  font-style: italic;
+}
+
+// Project Detail
+////////////////////////////////////////////////////////////////////////////////
 .project {}
 
 .project_info {
@@ -39,7 +156,7 @@
     padding-left: $gutter;
 
     p {
-      font-size: 47px;
+      font-size: 32px;
     }
 
     &:before {

@@ -39,10 +39,6 @@
     </div>
   </main>
   </article>
-<?php /*
-<pre><?php print_r($fields); ?></pre>
-<pre><?php print_r($post); ?></pre>
-*/ ?>
 <?php
   endwhile;
   endif;
