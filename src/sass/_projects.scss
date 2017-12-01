@@ -87,6 +87,7 @@ $grad_dark: 25;
   position: absolute;
   top: 50%;
 
+  opacity: 0;
   padding: 0 20px;
   transition: transform $speed * 2, opacity $speed * 2;
   z-index: 2;

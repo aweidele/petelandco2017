@@ -5,6 +5,11 @@
     "post_type" => "projects"
   ];
   $projects = new WP_Query($args);
+
+  $terms = get_terms( array(
+    'taxonomy' => 'filter',
+    'hide_empty' => false,
+) );
   ?>
   <header class="page_header">
     <div class="row">
@@ -14,8 +19,14 @@
   <main class="projects">
     <header class="projects_header">
       <div class="row">
+        <h3 class="projects_filter_heading"><?php echo icon('filter'); ?>Filter By</h3>
         <menu class="projects_filters">
-  menu
+          <ul class="projects_filters_list">
+            <?php foreach($terms as $term) { ?>
+              <li class="projects_filters_item"><a href="<?php echo get_term_link($term); ?>" class="projects_filters_link"><?php echo $term->name; ?></a></li>
+            <?php } ?>
+          </ul>
+
         </menu>
       </div>
     </header>
@@ -30,7 +41,7 @@
             <img src="<?php echo $fields["preview_image"]["sizes"]["project-listing"]; ?>" class="projects_image">
           </figure>
           <div class="projects_info">
-            <h2 class="projects_title"><?php echo $post->post_title; ?></h2>
+            <h3 class="projects_title"><?php echo $post->post_title; ?></h3>
             <?php if($fields['subtitle']) { ?>
             <div class="projects_subtitle"><?php echo $fields['subtitle']; ?></div>
             <?php } ?>

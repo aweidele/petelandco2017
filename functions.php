@@ -140,6 +140,24 @@ function custom_post_type() {
 	);
 	register_post_type( 'projects', $args );
 
+	register_taxonomy(
+		'filter',
+		'projects',
+		array(
+				'labels' => array(
+						'name'              => _x( 'Project Filters' , 'taxonomy general name' ),
+						'singular_name'     => _x( 'Project Filter' , 'taxonomy singular name'),
+						'add_new_item' => 'Add Project Filter',
+						'new_item_name' => "New Project Filter"
+				),
+				'show_ui' => true,
+				'show_admin_column' => true,
+				'show_tagcloud' => false,
+				'hierarchical' => true,
+				'support' => array('tags')
+		)
+	);
+
 	flush_rewrite_rules();
 
 }
