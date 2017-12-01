@@ -4,9 +4,65 @@ $grad_dark: 25;
 
 .projects {}
 
-.projects_header {}
+.projects_header {
+  padding: 45px 0;
+  > .row {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .projects_filters {}
+
+.projects_filter_heading {
+  background: $magenta;
+  color: $white;
+  font-size: 21px;
+  font-style: italic;
+  padding: 6px 19px;
+
+  .icon-filter {
+    position: relative;
+    top: -2px;
+
+    font-size: 9px;
+    margin-right: 8px;
+  }
+}
+
+.projects_filters_list {
+  display: flex;
+}
+
+.projects_filters_item {
+  position: relative;
+  font-size: 21px;
+
+  &.current:after {
+    height: 2px;
+    width: 75px;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    content: "";
+    display: block;
+    background: $magenta;
+    transform: translateX(-50%);
+  }
+}
+
+.projects_filters_link {
+  color: $black;
+  display: inline-block;
+  padding: 6px 19px;
+  text-decoration: none;
+
+  &:hover {
+    color: $magenta;
+  }
+}
 
 .projects_listing {
   @include clearfix;

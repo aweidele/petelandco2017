@@ -154,7 +154,13 @@ function custom_post_type() {
 				'show_admin_column' => true,
 				'show_tagcloud' => false,
 				'hierarchical' => true,
-				'support' => array('tags')
+				'support' => array('tags'),
+				'rewrite'								=> array(
+					'slug'                  => 'project-filter',
+					'with_front'            => true,
+					'pages'                 => true,
+					'feeds'                 => true,
+				),
 		)
 	);
 

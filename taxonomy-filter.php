@@ -1,26 +1,19 @@
 <?php
 /* Template Name: Projects */
   get_header();
-  $args = [
-    "post_type" => "projects"
-  ];
-  $projects = new WP_Query($args);
-
-  $terms = get_terms( array(
-    'taxonomy' => 'filter',
-    'hide_empty' => false,
-) );
+  $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+  $term_id = $term->term_id;
   ?>
   <header class="page_header">
     <div class="row">
-      <h2 class="page_title"><?php echo $post->post_title; ?></h2>
+      <h2 class="page_title"><?php the_title(); ?></h2>
     </div>
   </header>
   <main class="projects">
-    <?php get_template_part( 'partials/partial', 'filter-list' ); ?>
+    <?php include( 'partials/partial-filter-list.php' ); ?>
     <div class="projects_listing">
 <?php
-  while($projects->have_posts()) : $projects->the_post();
+  while(have_posts()) : the_post();
     $fields = get_fields();
 ?>
       <article class="projects_project<?php if($fields["theme"]) { echo " projects_theme_".$fields["theme"]; } ?>">
