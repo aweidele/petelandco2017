@@ -24,6 +24,16 @@
     }
   }
 
+  &:hover {
+    .staff_card_info {
+      opacity: 1;
+    }
+
+    .staff_card_info_inner {
+      transform: translateX(0);
+    }
+  }
+
 }
 
 .staff_card_portrait {
@@ -51,9 +61,6 @@
   opacity: 0;
   transition: opacity $speed;
 
-  .staff_card:hover & {
-    opacity: 1;
-  }
 }
 
 .staff_card_info_inner {
@@ -62,6 +69,8 @@
   left: 0;
 
   padding: $gutter;
+  transform: translateX(-20px);
+  transition: transform $speed;
 }
 
 .staff_card_name {
@@ -134,7 +143,7 @@
 .staff_card_connect_link {
   position: relative;
   top: 5px;
-  
+
   color: $gray_20;
   text-decoration: none;
 

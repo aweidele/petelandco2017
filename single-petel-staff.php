@@ -39,7 +39,7 @@
           foreach($social as $key => $link) {
             if($key == "first_name") {
               $social_output .= '
-          <span class="staff_card_connect_label">Follow '.$link != "" ? $link : firstname($post->post_title).':</span>';
+          <span class="staff_card_connect_label">Follow '.($link != "" ? $link : firstname($post->post_title)).':</span>';
             } else {
               if($link) {
                 $scount++;
