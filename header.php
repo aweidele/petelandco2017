@@ -81,4 +81,4 @@
     </nav>
   </header>
 
-  <main class="main main_<?php echo $layout; ?>">
+  <main class="main main_">
