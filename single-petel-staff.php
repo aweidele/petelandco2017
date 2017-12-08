@@ -34,27 +34,23 @@
         </div>
         <div class="staff_card_connect">
         <?php
-          ob_start();
           $scount = 0;
+          $social_output = "";
           foreach($social as $key => $link) {
             if($key == "first_name") {
-        ?>
-          <span class="staff_card_connect_label">Follow <?php echo $link != "" ? $link : firstname($post->post_title); ?>:</span>
-        <?php
+              $social_output .= '
+          <span class="staff_card_connect_label">Follow '.$link != "" ? $link : firstname($post->post_title).':</span>';
             } else {
               if($link) {
                 $scount++;
-        ?>
-          <a href="<?php echo $link; ?>" class="staff_card_connect_link"><?php echo icon('social_'.$key); ?></a>
-        <?php
+                $social_output .= '
+          <a href="'.$link.'" class="staff_card_connect_link">'.icon('social_'.$key).'</a>';
               }
             }
           }
           if($scount > 0) {
-            echo ob_get_clean();
+            echo $social_output;
           }
-          ob_end_clean();
-          ob_end_flush();
         ?>
         </div>
       </div>
