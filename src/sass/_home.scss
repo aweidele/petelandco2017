@@ -1,0 +1,70 @@
+.home_intro {
+  color: $magenta;
+  text-align: center;
+}
+
+.home_feature {
+  @include clearfix;
+}
+
+.home_feature_slide {
+  width: 33.3333%;
+  position: relative;
+
+  display: block;
+  float: left;
+  max-height: 790px;
+  overflow: hidden;
+}
+
+.home_feature_image {
+  position: relative;
+  z-index: 0;
+
+  img {
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+}
+
+.home_feature_info {
+  width: 100%;
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  color: $white;
+  font-style: italic;
+  padding: 0 20px;
+  text-align: center;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.home_feature_title {
+  @include h3;
+}
+
+.home_feature_subtitle {
+  @include paragraph;
+}
+
+.home_feature_button_container {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+
+  text-align: center;
+}
+
+.home_feature_button {
+  @include paragraph;
+
+  background: $magenta;
+  color: $white;
+  display: inline-block;
+  padding: 22px 50px;
+}
