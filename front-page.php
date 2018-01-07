@@ -11,9 +11,9 @@
 <?php
   foreach($fields["homepage_feature"] as $tile) {
     $fields = get_fields($tile->ID);
-    //$image = get_field("homepage_image",$tile->ID);
 ?>
-    <a class="home_feature_slide" href="<?php echo get_permalink($tile->ID); ?>">
+<?php echo console($fields); ?>
+    <a class="home_feature_slide<?php if($fields["theme"]) { echo " theme_".$fields["theme"]; } ?>" href="<?php echo get_permalink($tile->ID); ?>">
       <div class="home_feature_image">
         <img src="<?php echo $fields["homepage_image"]["sizes"]["homepage-feature"]; ?>">
       </div>
