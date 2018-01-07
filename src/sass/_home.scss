@@ -1,6 +1,16 @@
+.main_home {
+  padding-top: 20px;
+}
+
 .home_intro {
+  border-top: 1px solid $black;
   color: $magenta;
+  padding: 40px 0px 100px;
   text-align: center;
+
+  p {
+    @include h4;
+  }
 }
 
 .home_feature_wrapper {
