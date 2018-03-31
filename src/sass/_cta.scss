@@ -1,0 +1,37 @@
+.cta {
+  padding: 132px 0;
+
+  @each $name, $color, $txt in $themes {
+    &.theme_#{$name} {
+      background: $color;
+      color: $txt;
+    }
+  }
+}
+
+.cta_message {
+  font-size: 60px;
+  font-style: italic;
+}
+
+.cta_link {
+  @include h4;
+
+  background: $magenta;
+  color: $white;
+  display: block;
+  padding: 22px 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: background $speed;
+
+  &:hover {
+    background: darken($magenta, 10);
+  }
+
+  .icon {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+}
