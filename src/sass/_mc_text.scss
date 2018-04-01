@@ -1,6 +1,13 @@
+.mc_text {
+  @include margin;
+}
+
 .mc_text_content {
   @include paragraph;
-  padding: 90px 0;
+
+  p {
+    margin-bottom: 1em;
+  }
 }
 
 

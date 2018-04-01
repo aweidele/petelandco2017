@@ -7,6 +7,10 @@
   }
 }
 
+@mixin margin {
+  margin: 85px 0;
+}
+
 @mixin visually_hide {
   position: absolute;
   left: -999999px;

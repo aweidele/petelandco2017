@@ -1,4 +1,5 @@
 .main_nav {
+  @include sans;
   position: relative;
   left: 36px;
 
@@ -6,13 +7,14 @@
 
   .menu-item {
     display: inline-block;
+    text-transform: uppercase;
 
     a {
       position: relative;
 
-      color: $black;
+      color: $gray_20;
       display: inline-block;
-      font-size: 2.4rem;
+      font-size: 18px;
       padding: 19px + $gutter 36px;
       text-decoration: none;
     }
