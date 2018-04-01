@@ -17,8 +17,12 @@
     </nav>
     <div class="tabbed_content_items">
       <?php foreach($callout["tabs"] as $i => $tab) { ?>
-      <div class="tabbed_content_item<?php if($i==0) { echo " active"; } ?>" id="tab-<?=sanitize_title($tab["tab_name"])?>" role="tabpanel" aria-labelledby="tab<?=$i?>">
-        <?php echo wpautop($tab["tab_content"]); ?>
+      <div class="tabbed_content_item<?php if($i==0) { echo " active"; } ?>" id="tab-<?=sanitize_title($tab["tab_name"])?>" role="tabpanel" aria-labelledby="tab<?=$i?>" data-title="<?=$tab["tab_name"]?>">
+        <div class="col-10 push-1">
+          <div class="tabbed_content_item_inner">
+            <?php echo wpautop($tab["tab_content"]); ?>
+          </div>
+        </div>
       </div>
       <?php } ?>
     </div>
