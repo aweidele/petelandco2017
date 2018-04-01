@@ -39,10 +39,10 @@
 }
 
 @mixin paragraph {
-  font-size: 18px;
+  font-size: 24px;
 
   @media #{$min_sm} {
-    font-size: 24px;
+    //font-size: 24px;
   }
 }
 

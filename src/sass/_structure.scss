@@ -4,6 +4,9 @@ html {
 
 body {
   @include garamond;
+  width: 100%;
+  overflow: hidden;
+  
   background: $gray_90;
   font-size: 1em;
 }
