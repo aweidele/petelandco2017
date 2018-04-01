@@ -31,7 +31,9 @@ function register_menus() {
 add_image_size( 'staff-portait', 480, 480, true );
 add_image_size( 'full', 1200, 999999 );
 add_image_size( 'project-listing', 800, 436, true );
-add_image_size( 'homepage-feature', 480, 790, true );
+add_image_size( 'homepage-feature', 1440, 534, true );
+add_image_size( 'homepage-feature-md', 900, 500, true );
+add_image_size( 'homepage-feature-sm', 500, 400, true );
 
 // Register Custom Post Type
 function custom_post_type() {

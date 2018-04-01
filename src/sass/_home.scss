@@ -2,179 +2,105 @@
   padding-top: 20px;
 }
 
-.home_intro {
-  border-top: 1px solid $black;
-  color: $magenta;
-  padding: 40px 0px 100px;
-  text-align: center;
+.homepage_feature {
 
-  p {
-    @include h4;
-  }
 }
 
-.home_feature_wrapper {
+.homepage_feature_figure {
   position: relative;
-}
-
-.home_feature {
-  @include clearfix;
-  position: relative;
-  z-index: 0;
-}
-
-.home_feature_slide {
-  width: 33.3333%;
-  position: relative;
-
-  display: block;
-  float: left;
-  max-height: 790px;
+  max-height: 650px;
   overflow: hidden;
+  z-index: 0;
 
   &:after {
     width: 100%;
-    height: 100%;
+    height: 80%;
 
     position: absolute;
-    top: 0;
     left: 0;
+    bottom: 0;
 
     content: "";
     display: block;
-    background: $black;
-    opacity: 0;
-    transition: opacity $speed;
-    z-index: 1;
-  }
-
-  &:hover:after {
-    opacity: 0.53;
-  }
-
-  @each $name, $color, $txt in $themes {
-    &.theme_#{$name} {
-      &:after {
-        background: $color;
-      }
-    }
+    background: linear-gradient(0deg, $black, rgba($black,0));
   }
 }
 
-.home_feature_image {
-  position: relative;
-  z-index: 0;
-
+.homepage_feature_picture {
+  &,
   img {
-    height: auto;
     width: 100%;
-    display: block;
-    transition: filter $speed;
-  }
-
-  .home_feature_slide:hover & {
-    img {
-      filter: grayscale(100%) brightness(70%) contrast(150%);
-    }
+    height: auto;
+    position: relative;
+    z-index: 0;
   }
 }
 
-.home_feature_info {
-  width: 100%;
-  position: absolute;
-
-  top: 50%;
-  left: 0;
-
-  color: $white;
-  font-style: italic;
-  opacity: 0;
-  padding: 0 20px;
-  text-align: center;
-  transform: translateY(calc(-50% - 20px));
-  transition: transform $speed, opacity $speed;
-  z-index: 2;
-
-  .home_feature_slide:hover & {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-}
-
-.home_feature_title {
-  @include h3;
-}
-
-.home_feature_subtitle {
-  @include paragraph;
-}
-
-.home_feature_button_container {
-  width: 100%;
-
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-
-  text-align: center;
-  z-index: 2;
-}
-
-.home_feature_button {
-  @include paragraph;
-
-  background: $magenta;
-  color: $white;
-  display: inline-block;
-  opacity: 0;
-  padding: 22px 50px;
-  transition: transform $speed, opacity $speed, background $speed;
-
-  &:hover {
-    background: darken($magenta, 10);
-  }
-
-  .home_feature_slide:hover & {
-    opacity: 1;
-    transform: translateY(-20px);
-  }
-}
-
-.home_feature_all {
-  width: 100%;
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  text-align: center;
-  z-index: 5;
-}
-
-.home_feature_all_button {
-  @include h3;
+.homepage_feature_content {
   position: relative;
-  top: 62px;
+  background: $black;
+  color: $white;
+}
 
-  background: $white;
-  display: inline-block;
-  color: $black;
-  padding: 22px 30px;
-  text-decoration: none;
-  transition: background $speed, color $speed;
+.homepage_feature_content_inner {
+  position: relative;
+  padding: 43px 0;
+}
 
-  .icon {
-    font-size: 26px;
-    color: $magenta;
-    transition: color $speed;
+.homepage_feature_heading {
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding-bottom: 40px;
+  text-align: center;
+  transform: translateY(-100%);
+
+  &:after {
+    width: 100%;
+    height: 3px;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    content: "";
+    background: $blue;
+    border-radius: 1.5px;
+    display: block;
+    max-width: 580px;
+    transform: translateX(-50%);
+  }
+}
+
+.homepage_feature_intro_top {
+  display: block;
+  font-size: 47px;
+  font-style: italic;
+  line-height: (65 / 67) * 1em;
+}
+
+.homepage_feature_intro_bottom {
+  display: block;
+  font-size: 67px;
+  color: $magenta;
+  font-style: italic;
+  line-height: (80 / 95) * 1em;
+  text-transform: uppercase;
+}
+
+@media #{$min_sm} {
+  .homepage_feature_intro_top {
+    font-size: 67px;
   }
 
-  &:hover {
-    background: $magenta;
-    color: $white;
-
-    .icon {
-      color: $white;
-    }
+  .homepage_feature_intro_bottom {
+    font-size: 95px;
   }
+}
+
+.homepage_feature_intro {
+  line-height: (33.6 / 24) * 1em;
 }
