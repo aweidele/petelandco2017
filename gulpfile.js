@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
 
@@ -24,6 +26,16 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('css/'))
 });
 
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src('src/js/*.js'),
+        uglify(),
+        gulp.dest('js')
+    ],
+    cb
+  );
+});
+
 gulp.task('iconfont', function(){
   gulp.src(['src/icons/*.svg'])
     .pipe(iconfontCss({
@@ -42,5 +54,8 @@ gulp.task('iconfont', function(){
 
 gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
+  gulp.watch('src/js/**/*.js', ['compress']);
   gulp.watch('src/icons/**/*.svg', ['iconfont','sass']);
 });
+
+gulp.task('default', ['sass', 'compress', 'watch']);

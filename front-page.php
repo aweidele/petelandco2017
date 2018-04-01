@@ -9,7 +9,7 @@
 } ?>
 </div>
 <?php } ?>
-<pre><?php print_r($fields); ?></pre>
+<!-- pre><?php print_r($fields); ?></pre -->
 <?php
   include('modules/petel_cta.php');
   get_footer();
