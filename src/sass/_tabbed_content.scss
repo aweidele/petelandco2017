@@ -1,0 +1,64 @@
+.tabbed_content {
+  @include margin;
+}
+
+.tabbed_content_title {
+  @include h3;
+  margin-bottom: (55 / 47) * 1em;
+  text-align: center;
+}
+
+.tabbed_content_tabs {
+  display: flex;
+}
+
+.tabbed_content_tab {
+  position: relative;
+
+  background: darken($magenta, 10);
+  border-right: 1px solid $black;
+  padding: 16px 10px;
+
+  flex-grow: 1;
+
+  color: $white;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: background $speed;
+
+  &:after {
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+
+    border-style: solid;
+    border-width: 15px 21px 0 21px;
+    border-color: darken($magenta, 10) transparent transparent transparent;
+    content: "";
+
+    transform: translate(-21px,-15px);
+    transition: border-color $speed, transform $speed;
+  }
+
+  &.active {
+    background: $magenta;
+
+    &:after {
+      border-color: $magenta transparent transparent transparent;
+      transform: translate(-21px,0);
+    }
+
+  }
+}
+
+.tabbed_content_items {
+
+}
+
+.tabbed_content_item {
+
+}
