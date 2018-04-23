@@ -4,6 +4,10 @@
   [class*="push-"] {
     clear: both;
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .staff_list_section_title {
@@ -14,11 +18,12 @@
 
 .staff_card {
   position: relative;
+  margin-bottom: 18px;
 
   @each $name, $color, $txt in $themes {
     &.theme_#{$name} {
       .staff_card_info {
-        background: rgba($color,0.65);
+        background: $color;
         color: $txt;
       }
     }
@@ -54,22 +59,12 @@
   height: 100%;
   width: 100%;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  opacity: 0;
   transition: opacity $speed;
 
 }
 
 .staff_card_info_inner {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
   padding: $gutter;
-  transform: translateX(-20px);
   transition: transform $speed;
 }
 
@@ -79,6 +74,35 @@
 
 .staff_card_title {
   @include paragraph;
+}
+
+@media #{$min_sm} {
+  .staff_card {
+    margin-bottom: 0;
+
+    @each $name, $color, $txt in $themes {
+      &.theme_#{$name} {
+        .staff_card_info {
+          background: rgba($color,0.65);
+        }
+      }
+    }
+  }
+
+  .staff_card_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+  }
+
+  .staff_card_info_inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-20px);
+  }
 }
 
 
