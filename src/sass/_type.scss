@@ -23,7 +23,7 @@
 }
 
 @mixin h3 {
-  font-size: 47px;
+  font-size: 33px;
 
   @media #{$min_sm} {
     font-size: 47px;
@@ -31,7 +31,7 @@
 }
 
 @mixin h4 {
-  font-size: 33px;
+  font-size: 24px;
 
   @media #{$min_sm} {
     font-size: 33px;
@@ -39,10 +39,10 @@
 }
 
 @mixin paragraph {
-  font-size: 24px;
+  font-size: 16px;
 
   @media #{$min_sm} {
-    //font-size: 24px;
+    font-size: 24px;
   }
 }
 
