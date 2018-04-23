@@ -10,12 +10,13 @@
 }
 
 .header_pagetitle {
-  width: 215px;
-  height: 68px;
+  width: 104px;
+  height: 40px;
   float: left;
+  margin-top: 23px;
 
   a {
-    display: inline-block;
+    display: block;
   }
 }
 
@@ -24,11 +25,20 @@
 }
 
 .header_pagetitle_logo {
-  width: 215px;
-  height: 68px;
+  width: 104px;
+  height: 40px;
   display: block;
   .target,
   .amp {
     fill: $magenta;
+  }
+}
+
+
+@media #{$min_sm} {
+  .header_pagetitle,
+  .header_pagetitle_logo {
+    width: 215px;
+    height: 68px;
   }
 }

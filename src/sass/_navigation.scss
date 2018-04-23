@@ -1,9 +1,11 @@
 .main_nav {
   @include sans;
   position: relative;
-  left: 36px;
-
   float: right;
+
+  @media #{$min_sm} {
+    left: 36px;
+  }
 
   .menu-item {
     display: inline-block;
@@ -14,9 +16,23 @@
 
       color: $gray_20;
       display: inline-block;
-      font-size: 18px;
-      padding: 19px + $gutter 36px;
+      font-size: 12px;
+      padding: 30px 5px 10px;
       text-decoration: none;
+
+      @media #{$min_sm} {
+        font-size: 18px;
+        padding: 19px + $gutter 36px;
+      }
+    }
+
+    @media #{$max_sm} {
+      &:first-child a {
+        padding-left: 0;
+      }
+      &:last-child a {
+        padding-right: 0;
+      }
     }
 
     &.current-menu-item {
