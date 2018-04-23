@@ -35,6 +35,18 @@ add_image_size( 'homepage-feature', 1440, 534, true );
 add_image_size( 'homepage-feature-md', 900, 500, true );
 add_image_size( 'homepage-feature-sm', 500, 400, true );
 
+// Add options pages
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page('Call To Action');
+}
+if ( function_exists( 'acf_add_options_sub_page' ) ){
+	acf_add_options_sub_page(array(
+		'title'      => 'Footer',
+		'parent'     => 'themes.php',
+		'capability' => 'manage_options'
+	));
+}
+
 // Register Custom Post Type
 function custom_post_type() {
 

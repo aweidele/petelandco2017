@@ -1,5 +1,5 @@
 .cta {
-  padding: 132px 0;
+  padding: 45px 0;
 
   @each $name, $color, $txt in $themes {
     &.theme_#{$name} {
@@ -7,11 +7,23 @@
       color: $txt;
     }
   }
+
+  @media #{$min_lg} {
+    padding: 132px 0;
+  }
 }
 
 .cta_message {
-  font-size: 60px;
+  font-size: 33px;
   font-style: italic;
+  margin-bottom: 24px;
+  text-align: center;
+
+  @media #{$min_lg} {
+    font-size: 60px;
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
 
 .cta_link {

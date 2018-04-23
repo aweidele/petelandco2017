@@ -15,15 +15,22 @@
 }
 
 .footer_amp {
-  width: 569px;
+  width: 146px;
 
   position: absolute;
-  top: -47px;
-  left: -12px;
+  top: -10px;
+  left: -10px;
 
   display: block;
   fill: $magenta;
   opacity: 0.25;
+
+  @media #{$min_sm} {
+    width: 569px;
+
+    top: -47px;
+    left: -12px;
+  }
 }
 
 .footer_contact {
