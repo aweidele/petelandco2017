@@ -47,15 +47,15 @@
         </div>
       </div>
     </div>
-    <div class="footer_mobile" aria-hidden="true">
-      <a href="https://www.google.com/maps/place/<?=urlencode($address.' '.$address_line_2.' '.$city.' '.' '.$state.' '.$zip)?>/" target="_blank"><?php echo icon('map'); ?></a>
-      <a href="tel:<?=preg_replace("/[^0-9]/", "", $phone )?>"><?php echo icon('phone'); ?></a>
-      <a href="mailto:<?=$email?>"><?php echo icon('mail'); ?></a>
-    </div>
     <svg viewBox="290.2 9.2 115 140" class="footer_amp">
       <use href="#amp" class="amp"></use>
     </svg>
   </footer>
+  <div class="footer_mobile" aria-hidden="true">
+    <a href="https://www.google.com/maps/place/<?=urlencode($address.' '.$address_line_2.' '.$city.' '.' '.$state.' '.$zip)?>/" target="_blank"><?php echo icon('map'); ?></a>
+    <a href="tel:<?=preg_replace("/[^0-9]/", "", $phone )?>"><?php echo icon('phone'); ?></a>
+    <a href="mailto:<?=$email?>"><?php echo icon('email'); ?></a>
+  </div>
   <?php wp_footer(); ?>
 </body>
 </html>
