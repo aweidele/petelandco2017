@@ -1,3 +1,12 @@
+<?php
+  $address = get_field('address','option');
+  $address_line_2 = get_field('address_line_2','option');
+  $city = get_field('city','option');
+  $state = get_field('state','option');
+  $zip = get_field('zip','option');
+  $phone = get_field('phone','option');
+  $email = get_field('email','option');
+?>
   </main>
   <footer class="footer">
     <div class="row">
@@ -10,17 +19,22 @@
               <use href="#type" class="type"></use>
             </svg>
           </a>
-          <div class="footer_contact_block">
-            <?php echo icon('map'); ?>
-            <address>1101 14th Street, NW<br>
-            Suite 1210<br>
-            Washington, DC 20005</address>
+          <div class="footer_contact_block footer_address">
+            <a href="https://www.google.com/maps/place/<?=urlencode($address.' '.$address_line_2.' '.$city.' '.' '.$state.' '.$zip)?>/" target="_blank">
+              <?php echo icon('map'); ?>
+              <address><?=$address?><br>
+              <?php if($address_line_2) { ?>
+              <?=$address_line_2?><br>
+              <?php } ?>
+              <?=$city?>, <?=$state?> <?=$zip?></address>
+            </a>
           </div>
-          <div class="footer_contact_block">
+          <div class="footer_contact_block footer_phone">
+            <a href="tel:<?=preg_replace("/[^0-9]/", "", $phone )?>">
             <?php echo icon('phone'); ?>
-            <a href="tel:2023604323">202.360.4323</a>
+            <?=$phone?></a>
           </div>
-          <div class="footer_contact_block">
+          <div class="footer_contact_block footer_copyright">
             © Copyright 2015 | Petel & Co.
           </div>
         </div>
@@ -32,6 +46,11 @@
           <a href="#" class="social_link"><?php echo icon('twitter'); ?><span class="social_link_label">Twitter</span></a>
         </div>
       </div>
+    </div>
+    <div class="footer_mobile" aria-hidden="true">
+      <a href="https://www.google.com/maps/place/<?=urlencode($address.' '.$address_line_2.' '.$city.' '.' '.$state.' '.$zip)?>/" target="_blank"><?php echo icon('map'); ?></a>
+      <a href="tel:<?=preg_replace("/[^0-9]/", "", $phone )?>"><?php echo icon('phone'); ?></a>
+      <a href="mailto:<?=$email?>"><?php echo icon('mail'); ?></a>
     </div>
     <svg viewBox="290.2 9.2 115 140" class="footer_amp">
       <use href="#amp" class="amp"></use>

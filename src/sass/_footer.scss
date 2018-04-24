@@ -8,6 +8,15 @@
     color: $white;
     text-decoration: none;
 
+    @media #{$min_sm} {
+      &,
+      &:hover {
+        .icon {
+          color: $white;
+        }
+      }
+    }
+
     &:hover {
       color: $magenta;
     }
