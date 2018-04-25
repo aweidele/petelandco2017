@@ -19,4 +19,5 @@
     </div>
   </main>
   <?php
+  include('modules/petel_cta.php');
   get_footer();
