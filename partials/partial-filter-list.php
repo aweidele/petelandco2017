@@ -17,7 +17,7 @@
         </ul>
         <div class="project_filters_dropdown" aria-hidden="true">
           <select class="project_filters_select dropdown">
-            <option value=""<?php if(!$is_term) { echo " selected"; } ?>><?php if(!$is_term) { echo "Select Category"; } else { echo "All "; } ?></option>
+            <option value="<?php echo get_post_type_archive_link( 'projects' ); ?>"<?php if(!$is_term) { echo " selected"; } ?>><?php if(!$is_term) { echo "Select Category"; } else { echo "All "; } ?></option>
             <?php foreach($terms as $term) { ?>
             <option value="<?php echo get_term_link($term); ?>"<?php if($is_term && $term_id == $term->term_id) { echo " selected"; } ?>><?php echo $term->name; ?></option>
             <?php } ?>
