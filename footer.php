@@ -6,6 +6,8 @@
   $zip = get_field('zip','option');
   $phone = get_field('phone','option');
   $email = get_field('email','option');
+  $social_heading = get_field('social_heading','option');
+  $social_links = get_field('social_links','option');
 ?>
   </main>
   <footer class="footer">
@@ -40,11 +42,14 @@
         </div>
       </div>
       <div class="col-3">
-        <h4 class="social_header">Get the Latest</h4>
+        <?php if(!empty($social_links)) { ?>
+        <h4 class="social_header"><?=$social_heading?></h4>
         <div class="social_links">
-          <a href="#" class="social_link"><?php echo icon('facebook_circle'); ?><span class="social_link_label">Facebook</span></a>
-          <a href="#" class="social_link"><?php echo icon('twitter'); ?><span class="social_link_label">Twitter</span></a>
+          <?php foreach($social_links as $link) { ?>
+          <a href="<?=$link['link']?>" class="social_link" target="_blank"><?php echo icon($link['network']); ?><span class="social_link_label"><?=ucwords($link['network'])?></span></a>
+          <?php } ?>
         </div>
+        <?php } ?>
       </div>
     </div>
     <svg viewBox="290.2 9.2 115 140" class="footer_amp">
@@ -54,7 +59,7 @@
   <div class="footer_mobile" aria-hidden="true">
     <a href="https://www.google.com/maps/place/<?=urlencode($address.' '.$address_line_2.' '.$city.' '.' '.$state.' '.$zip)?>/" target="_blank"><?php echo icon('map'); ?></a>
     <a href="tel:<?=preg_replace("/[^0-9]/", "", $phone )?>"><?php echo icon('phone'); ?></a>
-    <a href="mailto:<?=$email?>"><?php echo icon('email'); ?></a>
+    <a href="mailto:<?=$email?>"><?php echo icon('social_email'); ?></a>
   </div>
   <?php wp_footer(); ?>
 </body>
