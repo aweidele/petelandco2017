@@ -21,6 +21,18 @@
       color: $magenta;
     }
   }
+
+  .row {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media #{$max_lg} {
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .footer_amp {
@@ -33,6 +45,7 @@
   display: block;
   fill: $magenta;
   opacity: 0.25;
+  z-index: 0;
 
   @media #{$min_sm} {
     width: 569px;
@@ -45,32 +58,63 @@
 .footer_contact {
   @include sans;
   font-size: 16px;
-  padding: 78px 0 50px;
+
+  @media #{$min_lg} {
+    padding: 78px 0 50px;
+  }
+}
+
+.footer_logo_link {
+  display: flex;
+  justify-content: flex-end;
+
+  @media #{$min_sm} {
+    display: block;
+  }
 }
 
 .footer_logo {
-  width: 154px;
+  height: 52px;
+  width: 137px;
   display: block;
   fill: $white;
   margin-bottom: 30px;
+
+  @media #{$min_sm} {
+    height: 49px;
+    width: 154px;
+  }
 }
 
 .footer_contact_block {
   position: relative;
   margin-bottom: 1em;
-  padding-left: 36px;
 
   .icon {
     position: absolute;
     top: 0;
     left: 0;
   }
+
+  @media #{$min_sm} {
+    padding-left: 36px;
+  }
+
+  &.footer_address,
+  &.footer_phone {
+    @media #{$max_sm} {
+      display: none;
+    }
+  }
 }
 
 .social_header {
   @include paragraph;
-  margin-top: 155px;
-  margin-bottom: 21px;
+
+  @media #{$min_lg} {
+    margin-top: 155px;
+    margin-bottom: 21px;
+  }
 }
 
 .social_link {
@@ -91,6 +135,7 @@
 
   display: flex;
   background: $gray_90;
+  border-top: 1px solid $white;
   z-index: 5;
 
   a {
@@ -98,7 +143,16 @@
     display: block;
     flex-grow: 1;
     font-size: 24px;
+    padding: 10px 0 6px;
     text-decoration: none;
     text-align: center;
+
+    + a {
+      border-left: 1px solid $white;
+    }
+  }
+
+  @media #{$min_sm} {
+    display: none;
   }
 }

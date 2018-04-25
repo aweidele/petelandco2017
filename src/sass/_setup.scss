@@ -35,6 +35,7 @@ $min_lg: "screen and (min-width: " #{$breakpoint} ")";
 $min_sm: "screen and (min-width: " #{$breakpoint_sm} ")";
 
 $max_sm: "screen and (max-width: " #{$breakpoint_sm - 1} ")";
+$max_lg: "screen and (max-width: " #{$breakpoint - 1} ")";
 
 .row {
   @include clearfix;
