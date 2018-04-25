@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
 var iconfont = require('gulp-iconfont');
@@ -26,14 +28,13 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('css/'))
 });
 
-gulp.task('compress', function (cb) {
-  pump([
-        gulp.src('src/js/*.js'),
-        uglify(),
-        gulp.dest('js')
-    ],
-    cb
-  );
+gulp.task('compress', function() {
+  return gulp.src('src/js/*.js')
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('js'))
+    .pipe(rename('site.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('iconfont', function(){
