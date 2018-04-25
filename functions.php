@@ -111,7 +111,7 @@ function custom_post_type() {
 		'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'text_domain' ),
 		'menu_name'             => __( 'Project', 'text_domain' ),
 		'name_admin_bar'        => __( 'Project', 'text_domain' ),
-		'archives'              => __( '', 'text_domain' ),
+		'archives'              => __( 'All Projects', 'text_domain' ),
 		'attributes'            => __( '', 'text_domain' ),
 		'parent_item_colon'     => __( '', 'text_domain' ),
 		'all_items'             => __( 'All Projects', 'text_domain' ),
@@ -138,27 +138,19 @@ function custom_post_type() {
 	$args = array(
 		'label'                 => __( 'Projects', 'text_domain' ),
 		'description'           => __( 'Projects and Case Studies', 'text_domain' ),
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'custom-fields', 'editor', 'page-attributes'),
-		'hierarchical'          => false,
-		'public'                => false,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-hammer',
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => false,
-		'can_export'            => true,
-		'has_archive'           => false,
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
-		'rewrite'								=> array(
-			'slug'                  => 'project',
-			'with_front'            => true,
-			'pages'                 => true,
-			'feeds'                 => true,
-		),
+		'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'menu_icon' => 'dashicons-hammer',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array( 'title', 'custom-fields', 'editor', 'page-attributes'),
+    'has_archive' => true,
+		'rewrite' => array(
+			'slug' => 'our-work'),
 	);
 	register_post_type( 'projects', $args );
 
@@ -177,12 +169,8 @@ function custom_post_type() {
 				'show_tagcloud' => false,
 				'hierarchical' => true,
 				'support' => array('tags'),
-				'rewrite'								=> array(
-					'slug'                  => 'project-filter',
-					'with_front'            => true,
-					'pages'                 => true,
-					'feeds'                 => true,
-				),
+				'rewrite' => array(
+					'slug' => 'project-filter'),
 		)
 	);
 

@@ -503,4 +503,8 @@ $(document).ready(function() {
     $(t).addClass("active");
   });
 
+  $(".project_filters_select").on("change",function() {
+    window.location = $(this).val();
+  });
+
 });
