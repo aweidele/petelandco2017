@@ -69,6 +69,8 @@ ini_set('display_errors', 1); ?>
       </g>
     </svg>
   </figure>
+  <div class="page_wrapper">
+
   <header class="header header_<?php echo $layout; ?>">
     <h1 class="header_pagetitle"><a href="<?php echo get_home_url(); ?>">
       <span class="header_pagetitle_text"><?php echo get_bloginfo('name'); ?></span>

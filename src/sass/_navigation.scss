@@ -28,25 +28,30 @@
 
     @media #{$max_sm} {
       &:first-child a {
-        padding-left: 0;
+        //padding-left: 0;
       }
       &:last-child a {
-        padding-right: 0;
+        //padding-right: 0;
       }
     }
 
     &.current-menu-item {
       a:after {
         content: " ";
-        height: 12px;
+        height: 6px;
         width: 100%;
 
         position: absolute;
-        bottom: -1px;
+        bottom: -6px;
         left: 0;
 
         background: $dk_teal;
         display: block;
+
+        @media #{$min_sm} {
+          height: 12px;
+          bottom: -1px;
+        }
       }
     }
   }

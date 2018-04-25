@@ -11,7 +11,7 @@
       <ul class="projects_filters_list">
         <?php foreach($terms as $term) {
           ?>
-          <li class="projects_filters_item<?php if($term_id && $term_id == $term->term_id) { echo " current"; } ?>"><a href="<?php echo get_term_link($term); ?>" class="projects_filters_link"><?php echo $term->name; ?></a></li>
+          <li class="projects_filters_item<?php if(isset($term_id) && $term_id && $term_id == $term->term_id) { echo " current"; } ?>"><a href="<?php echo get_term_link($term); ?>" class="projects_filters_link"><?php echo $term->name; ?></a></li>
         <?php } ?>
       </ul>
 
