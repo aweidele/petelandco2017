@@ -79,7 +79,8 @@
 }
 
 .tabbed_content_item {
-  @include clearfix;
+  //@include clearfix;
+  position: relative;
   margin-bottom: 2px;
 
   &:before {
@@ -94,6 +95,22 @@
     min-height: 3px;
   }
 
+  &:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: $white transparent transparent transparent;
+
+    position: absolute;
+    top: 17px;
+    right: 10px;
+
+    display: block;
+    content: "";
+    transition: border-width $speed, border-color $speed;
+  }
+
   p {
     font-size: 24px;
     margin-bottom: 1em;
@@ -104,8 +121,9 @@
   }
 
   @media #{$min_sm} {
-    display: none;
-    &:before {
+    &,
+    &:before,
+    &:after {
       display: none;
     }
   }
@@ -122,6 +140,12 @@
     &:before {
       background: $magenta;
       cursor: auto;
+    }
+
+    &:after {
+      //transform: rotate(180deg);
+      border-width: 0 5px 6px 5px;
+      border-color: transparent transparent $white transparent;
     }
   }
 }
