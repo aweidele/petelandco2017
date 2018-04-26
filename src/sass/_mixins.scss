@@ -8,7 +8,19 @@
 }
 
 @mixin margin {
-  margin: 85px 0;
+  margin: 55px 0;
+
+  @media #{$min_sm} {
+    margin: 85px 0;
+  }
+}
+
+@mixin padding {
+  padding: 55px 0;
+
+  @media #{$min_sm} {
+    padding: 85px 0;
+  }
 }
 
 @mixin visually_hide {

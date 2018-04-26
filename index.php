@@ -1,19 +1,17 @@
 <?php
   get_header();
-  $child_pages = get_pages(array(
-    'parent' => $post->ID,
-    'sort_column' => 'menu_order',
-  ));
+  $fields = get_fields($post->ID);
 ?>
   <header class="page_header">
     <div class="row">
       <h2 class="page_title"><?php echo $post->post_title; ?></h2>
     </div>
   </header>
+  <div class="callouts">
+  <?php foreach($fields["callouts"] as $callout) {
+    include('modules/petel_'.$callout["acf_fc_layout"].'.php');
+  } ?>
+  </div>
 <?php
-  foreach($child_pages as $section) {
-    $layout = get_field('layout',$section->ID);
-    $background_class = 'bg-'.get_field('theme',$section->ID);
-    include('modules/petel_'.$layout.'.php');
-  }
+  include('modules/petel_cta.php');
   get_footer();
