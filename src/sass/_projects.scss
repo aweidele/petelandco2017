@@ -352,3 +352,67 @@ $grad_dark: 25;
 
   display: block;
 }
+
+.project_nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 87px 0;
+  padding: 0 10px;
+
+  @media #{$min_sm} {
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: 1240px) {
+    padding: 0;
+  }
+}
+
+.project_prev,
+.project_next {
+  @include paragraph;
+
+  color: $gray_20;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $magenta;
+  }
+
+  .icon {
+    font-size: (15 / 24) * 1em;
+  }
+}
+
+.project_prev {
+  order: 1;
+}
+
+.project_next {
+  order: 3;
+}
+
+.project_index {
+  @include paragraph;
+  text-decoration: none;
+  color: $magenta;
+  order: 2;
+  transition: color $speed;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.project_index_label {
+  @include visually_hide;
+}
+
+.project_nav_title {
+  @media #{$max_sm} {
+    @include visually_hide;
+  }
+}

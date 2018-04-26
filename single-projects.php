@@ -39,8 +39,32 @@
     </div>
   </main>
   </article>
+  <?php
+    endwhile;
+    endif;
+
+    // Determine Next and Previous
+    $projects_posts = get_posts(array(
+      'post_type' => 'projects',
+      'orderby' => 'menu_order',
+      'order' => 'ASC'
+    ) );
+
+    $projects_list = [];
+    foreach ($projects_posts as $staff) {
+      $projects_list[] = $staff->ID;
+    }
+
+    $current_index = array_search($post->ID,$projects_list);
+    $next_project = $current_index < sizeof($projects_posts) - 1 ? $projects_posts[$current_index + 1] : $projects_posts[0];
+    $prev_project = $current_index > 0 ? $projects_posts[$current_index - 1] : $projects_posts[sizeof($projects_posts) - 1];
+  ?>
+  <div class="row">
+    <nav class="project_nav">
+      <a href="<?php echo get_permalink($prev_project->ID); ?>" class="project_prev"><?=icon('chevron_left')?> Previous<span class="project_nav_title">: <?php echo $prev_project->post_title; ?></span></a>
+      <a href="<?php echo get_permalink($next_project->ID); ?>" class="project_next">Next<span class="project_nav_title">: <?php echo $next_project->post_title; ?></span> <?=icon('chevron_right')?></a>
+      <a href="<?=get_post_type_archive_link('projects')?>" class="project_index"><span class="project_index_label">View All</span><?=icon('grid')?></a>
+    </nav>
+  </div>
 <?php
-  endwhile;
-  endif;
   get_footer();
-?>
