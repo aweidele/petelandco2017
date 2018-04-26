@@ -1,0 +1,36 @@
+.cta_button {
+  text-align: center;
+  margin: 85px 0;
+}
+
+.cta_button_link {
+  border-radius: 5px;
+  font-size: 33px;
+  text-decoration: none;
+  padding: 9px 50px;
+
+  @media #{$min_lg} {
+    font-size: 67px;
+    padding: 9px 100px;
+  }
+
+  @each $name, $color, $txt in $themes {
+    .cta_button.theme_#{$name} & {
+      background: $color;
+      color: $txt;
+    }
+  }
+
+  .icon {
+    font-size: (29 / 67) * 1em;
+    color: $magenta;
+
+    @each $name, $color, $txt in $themes {
+      @if $txt == $black or $color == $magenta {
+        .cta_button.theme_#{$name} & {
+          color: $txt;
+        }
+      }
+    }
+  }
+}

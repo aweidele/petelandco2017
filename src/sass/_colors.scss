@@ -22,7 +22,8 @@ $themes: (
   (purple, $purple, $white),
   (dk_teal,$dk_teal, $white),
   (lt_orange, $lt_orange, $black),
-  (gray_10, $gray_10, $black)
+  (gray_10, $gray_10, $black),
+  (gray_90, $gray_90, $white)
 );
 
 @each $name, $color, $txt in $themes {

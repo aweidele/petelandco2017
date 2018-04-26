@@ -309,6 +309,86 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5ae1b513a2ee3": {
+                    "key": "5ae1b513a2ee3",
+                    "name": "cta_button",
+                    "label": "CTA Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ae1b51ea2ee4",
+                            "label": "CTA Text",
+                            "name": "cta_text",
+                            "type": "text",
+                            "value": null,
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5ae1b529a2ee5",
+                            "label": "CTA Link",
+                            "name": "cta_link",
+                            "type": "link",
+                            "value": null,
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url"
+                        },
+                        {
+                            "key": "field_5ae1b7067b129",
+                            "label": "CTA Button Color",
+                            "name": "cta_button_color",
+                            "type": "select",
+                            "value": null,
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "white": "White",
+                                "green": "Green",
+                                "magenta": "Magenta",
+                                "olive": "Olive",
+                                "orange": "Orange",
+                                "purple": "Purple",
+                                "gray_10": "Light Gray",
+                                "gray_90": "Dark Gray"
+                            },
+                            "default_value": [
+                                "gray_90"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -333,5 +413,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1522613395
+    "modified": 1524741936
 }
