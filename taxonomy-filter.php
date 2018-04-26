@@ -5,7 +5,7 @@
   ?>
   <header class="page_header">
     <div class="row">
-      <h2 class="page_title"><?php the_title(); ?></h2>
+      <h2 class="page_title">Our Work</h2>
     </div>
   </header>
   <main class="projects">

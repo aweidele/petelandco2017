@@ -75,9 +75,9 @@ ini_set('display_errors', 1); ?>
     <h1 class="header_pagetitle"><a href="<?php echo get_home_url(); ?>">
       <span class="header_pagetitle_text"><?php echo get_bloginfo('name'); ?></span>
       <svg viewBox="0 0 578.6 182.8" class="header_pagetitle_logo">
-        <use href="#target" class="target"></use>
-        <use href="#amp" class="amp"></use>
-        <use href="#type" class="type"></use>
+        <use xlink:href="#target" class="target"></use>
+        <use xlink:href="#amp" class="amp"></use>
+        <use xlink:href="#type" class="type"></use>
       </svg></a>
     </h1>
     <nav class="main_nav">

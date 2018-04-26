@@ -16,9 +16,9 @@
         <div class="footer_contact" itemscope itemtype="http://schema.org/Corporation">
           <a href="<?php echo get_home_url(); ?>" class="footer_logo_link">
             <svg viewBox="0 0 578.6 182.8" class="footer_logo">
-              <use href="#target" class="target"></use>
-              <use href="#amp" class="amp"></use>
-              <use href="#type" class="type"></use>
+              <use xlink:href="#target" class="target"></use>
+              <use xlink:href="#amp" class="amp"></use>
+              <use xlink:href="#type" class="type"></use>
             </svg>
           </a>
           <div class="footer_contact_block footer_address">
@@ -53,7 +53,7 @@
       </div>
     </div>
     <svg viewBox="290.2 9.2 115 140" class="footer_amp">
-      <use href="#amp" class="amp"></use>
+      <use xlink:href="#amp" class="amp"></use>
     </svg>
   </footer>
 
