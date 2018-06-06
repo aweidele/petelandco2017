@@ -33,7 +33,11 @@ get_header();
       </div>
     </div>
     <div class="col-8">
-      contact form
+      <div class="contact_content">
+<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+        <?php the_content(); ?>
+<?php endwhile; endif; ?>
+      </div>
     </div>
   </div>
 </main>
