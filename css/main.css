@@ -2452,6 +2452,10 @@ body {
   display: table;
 }
 
+.contact_wrapper a:hover {
+  color: #D0112B;
+}
+
 .contact_wrapper .icon {
   margin-right: 16px;
   padding-top: 0.15em;
