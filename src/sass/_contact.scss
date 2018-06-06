@@ -1,0 +1,28 @@
+.contact_main {
+  @include padding;
+}
+
+.contact_wrapper {
+  @include paragraph;
+
+  a {
+    @include clearfix;
+    display: flex;
+    color: $black;
+    margin-bottom: 1em;
+    text-decoration: none;
+
+    &:hover {
+      color: $magenta;
+    }
+  }
+
+  .icon {
+    margin-right: 16px;
+    padding-top: 0.15em;
+  }
+}
+
+.contact_address {
+
+}
