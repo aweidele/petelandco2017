@@ -1,11 +1,15 @@
 $speed: 0.25s;
 
 * {
-  box-sizing: border-box;
-  border: 0;
-  outline: none;
-  margin: 0;
-  padding: 0;
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    border: 0;
+    outline: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 ul,ol {
