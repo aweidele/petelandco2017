@@ -49,6 +49,10 @@
     max-width: none;
   }
 
+  textarea {
+
+  }
+
   input[type=submit],
   button[type=submit],
   .wpforms-page-button {
@@ -130,5 +134,14 @@
         display: flex;
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .wpforms-one-half {
+    width: 100%;
+    float: none;
+    margin-left: 0;
   }
 }
