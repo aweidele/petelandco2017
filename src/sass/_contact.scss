@@ -27,8 +27,6 @@
 
 }
 
-
-
 .contact_content div.wpforms-container-full .wpforms-form {
   input[type=date],
   input[type=datetime],
@@ -48,14 +46,19 @@
   textarea {
     @include garamond;
     @include paragraph;
+    max-width: none;
+  }
+
+  input[type=submit]:hover,
+  input[type=submit]:active,
+  button[type=submit]:hover,
+  button[type=submit]:active,
+  .wpforms-page-button:hover,
+  .wpforms-page-button:active {
+    @include garamond;
+    @include paragraph;
   }
 }
-// .contact_content {
-//   input,
-//   textarea {
-//     @include paragraph;
-//   }
-// }
 
 // WP Forms Styling
 .page_wrapper {
