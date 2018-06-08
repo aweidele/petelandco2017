@@ -50,19 +50,19 @@
   }
 
   input[type=submit],
-  button[type=submit] {
+  button[type=submit],
+  .wpforms-page-button {
     @include garamond;
     @include paragraph;
-  }
+    background: $magenta;
+    border: 0;
+    color: $white;
 
-  input[type=submit]:hover,
-  input[type=submit]:active,
-  button[type=submit]:hover,
-  button[type=submit]:active,
-  .wpforms-page-button:hover,
-  .wpforms-page-button:active {
-    //  @include garamond;
-    //  @include paragraph;
+    &:hover,
+    &:active {
+      background: darken($magenta, 10);
+    }
+
   }
 }
 
