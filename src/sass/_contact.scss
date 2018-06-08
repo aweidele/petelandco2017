@@ -135,13 +135,13 @@
       }
     }
   }
-}
 
-
-@media screen and (max-width: 600px) {
-  .wpforms-one-half {
-    width: 100%;
-    float: none;
-    margin-left: 0;
+  @media screen and (max-width: 600px) {
+    div.wpforms-container-full .wpforms-form .wpforms-one-half {
+      width: 100%;
+      float: none;
+      margin-left: 0;
+    }
   }
+
 }
