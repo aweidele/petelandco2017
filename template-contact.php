@@ -17,6 +17,13 @@ get_header();
 </header>
 <main class="contact_main">
   <div class="row">
+    <div class="col-8 push-right">
+      <div class="contact_content">
+<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+        <?php the_content(); ?>
+<?php endwhile; endif; ?>
+      </div>
+    </div>
     <div class="col-4">
       <div class="contact_wrapper">
         <a href="https://www.google.com/maps/place/<?=urlencode($address.' '.$address_line_2.' '.$city.' '.' '.$state.' '.$zip)?>/" target="_blank">
@@ -30,13 +37,6 @@ get_header();
         <a href="tel:<?=preg_replace("/[^0-9]/", "", $phone )?>">
         <?php echo icon('phone'); ?>
         <?=$phone?></a>
-      </div>
-    </div>
-    <div class="col-8">
-      <div class="contact_content">
-<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-        <?php the_content(); ?>
-<?php endwhile; endif; ?>
       </div>
     </div>
   </div>

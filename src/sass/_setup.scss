@@ -78,6 +78,10 @@ $max_lg: "screen and (max-width: " #{$breakpoint - 1} ")";
       margin-left: percentage($i / $cols);
     }
   }
+
+  .push-right {
+    float: right;
+  }
 }
 
 #target,#amp,#type  {
