@@ -49,14 +49,20 @@
     max-width: none;
   }
 
+  input[type=submit],
+  button[type=submit] {
+    @include garamond;
+    @include paragraph;
+  }
+
   input[type=submit]:hover,
   input[type=submit]:active,
   button[type=submit]:hover,
   button[type=submit]:active,
   .wpforms-page-button:hover,
   .wpforms-page-button:active {
-    @include garamond;
-    @include paragraph;
+    //  @include garamond;
+    //  @include paragraph;
   }
 }
 
