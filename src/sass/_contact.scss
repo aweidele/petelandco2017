@@ -57,6 +57,7 @@
     background: $magenta;
     border: 0;
     color: $white;
+    transition: background $speed;
 
     &:hover,
     &:active {
